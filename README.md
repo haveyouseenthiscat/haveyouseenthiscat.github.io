@@ -1,8 +1,3 @@
----
-title: Have You Seen This Cat?
-google-site-verification: 3LKwQ5vPE1JCE_JjuUy3pMz5V99YVQEGEGU0Y7YYXC8
----
-
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/haveyouseenthiscat/haveyouseenthiscat.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
