@@ -1,5 +1,11 @@
-function setCookie(cname, cvalue) {
-  document.cookie = cname + "=" + cvalue + ";path=/";
+function setCookie2(cname, cvalue) {
+  document.cookie = cname + "=" + cvalue;
+}
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 function getCookie(cname) {
   var name = cname + "=";
@@ -16,17 +22,16 @@ function getCookie(cname) {
   }
   return "";
 }
-function checkCookie() {
-  var username = getCookie("username");
-  if (username != "") {
-   alert("Welcome again " + username);
+function checkPawca() {
+  var pawca = getCookie("pawcahontas");
+  if (pawca != "") {
+    alert("Veronica Maus");
   } else {
-    username = prompt("Please enter your name:", "");
-    if (username != "" && username != null) {
-      setCookie("username", username);
-    }
+    alert("The lamp is very dusty, but nothing interesting here just now.");
   }
 }
+function setPawca() {
+  setCookie2("pawcahontas", "true");}
 
 function clickA1() {
   alert("You clicked the window");
