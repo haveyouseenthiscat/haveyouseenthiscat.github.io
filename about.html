@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/script.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+$(function(){
+  $("#header").load("header.html"); 
+  $("#footer").load("header.html"); 
+});
+    </script> 
 </head>
 <body>
-
+    <div id="header"></div>
+<div class="parent">
+      <img class="cat" src="assets/img/mango.png" alt="Have You Seen This Cat? [cat lying on a chair]" title="Have You Seen This Cat?" />
+    </div>
 This is a page for the Global Game Jame 2021 game <strong>Have You Seen This Cat?</strong>. You can find the game on the Global Game Jam page <a href="https://globalgamejam.org/2021/games/have-you-seen-cat-3">here</a>.
 
 <a href="https://github.com/haveyouseenthiscat/haveyouseenthiscat.github.io">The source code for this page on Github</a>.

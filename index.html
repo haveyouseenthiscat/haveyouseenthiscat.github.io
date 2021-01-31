@@ -3,7 +3,7 @@
   <head>
     <meta name="google-site-verification" content="3LKwQ5vPE1JCE_JjuUy3pMz5V99YVQEGEGU0Y7YYXC8" />
     <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/cookies.js"></script>
+    <script src="assets/script.js"></script>
     <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -33,16 +33,65 @@ Let's try to find out where she is and get her to show herself!
     <div class="parent">
       <img class="borders" src="assets/img/room/huone_reunat.png" />
       <img class="A1" onclick="clickA1()" src="assets/img/room/huoneA1.png" />
-      <img class="A2" onclick="checkPawca()" src="assets/img/room/huoneA2.png" />
+      <img class="A2" onclick="clickA2()" src="assets/img/room/huoneA2.png" />
       <img class="A3" onclick="clickA3()" src="assets/img/room/huoneA3.png" />
       <img class="B1" onclick="clickB1()" src="assets/img/room/huoneB1.png" />
-      <img class="B2" onclick="setPawca()" src="assets/img/room/huoneB2.png" />
+      <img class="B2" onclick="clickA3()" src="assets/img/room/huoneB2.png" />
       <img class="B3" onclick="clickB3()" src="assets/img/room/huoneB3.png" />
       <img class="C1" onclick="clickC1()" src="assets/img/room/huoneC1.png" />
       <img class="C2" onclick="clickC2()" src="assets/img/room/huoneC2.png" />
       <img class="C3" onclick="clickC3()" src="assets/img/room/huoneC3.png" />
+      <img class="character" id="bandw" onclick="hide('bandw','bandwtext')" src="assets/img/characters/barck-wolfander.png" />
+      <img class="character" id="pawca" onclick="hide('pawca','pawcatext')" src="assets/img/characters/pawcahontas.png" />
+      <img class="character" id="hiss" onclick="hide('hiss','hisstext')" src="assets/img/characters/hissbeth.png" />
+      <img class="character" id="holm" onclick="hide('holm','holmtext')" src="assets/img/characters/holmeows.png" />
+      <img class="character" id="nyancy" onclick="hide('nyancy','nyancytext')" src="assets/img/characters/nyancydrew.png" />
+      <img class="character" id="purrot" onclick="hide('purrot','purrottext')" src="assets/img/characters/purrot.png" />
+      <img class="character" id="vero" onclick="hide('vero','verotext')" src="assets/img/characters/veronicamaus.png" />
+      <img class="character" id="frida" onclick="hide('frida','fridatext')" src="assets/img/characters/fridakatlo.png" />
+      
+      <div class="chartext" id="bandwtext" onclick="hide('bandw','bandwtext')" >
+        <p>"Oh no! Who left the window open? Could she have escaped outside?...Probably not, since Barck and Wolfander are being so aggressively noisy out there. <br>
+        But they're quite clever (for dogs, that is) so they might still know something. It's just that one of them always lies, while the other always tells the truth. <br>
+        Too bad I can never remember which of them does what... </p>
+        <p>"Hey dogs! Have you seen this cat? Do you have anything else to say besides bark bark and woof woof?" <br>
+        A short silence, then Barck barks out, "If Wolfander speaks the truth, then I am lying!" <br>
+        Wolfander continues, "The daily name is red!" <br>
+        Barck answers, "But the third name is always green!" </p>
+        <p>Well... That"s something, at least. I don't think we're gonna get anything more out of them.</p>
+      </div>
+      
+      <div class="chartext" id="pawcatext" onclick="hide('pawca','pawcatext')" >
+        <p>Pawcahontas is sitting on the chair, looking quite annoyed.<br>
+        "After finishing the bird I chased a mouse," she says, "but the little devil escaped me."<br>
+        Maybe the mouse knows something about the cat we're looking for? But where is the mouse now?<br>
+        Pawcahontas probably knows, but she's sulking silently.</p></div>  
+      <div class="chartext" id="hisstext" onclick="hide('hiss','hisstext')" >
+        <p>Hissbeth Furlander is on the table, glaring at us from behind the cactus.<br>
+        She's a great hacker, too! Hopefully she can find out something on the computer...<br>
+        But she has forgotten the password of the laptop! Maybe we can help her with it?</p></div>  
+      <div class="chartext" id="holmtext" onclick="hide('holm','holmtext')" >
+        <p>Holmeows is lazily smoking his pipe after a good workout with the scratching post.<br>
+        Maybe he can help us find the cat we're looking for.</p></div>  
+      <div class="chartext" id="nyancytext" onclick="hide('nyancy','nyancytext')" >
+        <p>Look at that! Nyancy Drew is playing with the yarn!<br>
+        But what's got her so spooked now? That rustling sound?<br>
+        Oh! There's a crumpled note between the woollen balls. (Maybe print it out?)</p></div>  
+      <div class="chartext" id="purrottext" onclick="hide('purrot','purrottext')" >
+        <p>Oh la la! Monsieur Purrot is loafing on the rug.<br>
+        If you let the banker stay, he will pay for petite Nyancy's toys," he says. "The answer for this little riddle is ten long."<br>
+        What could that mean?<br>
+        But Monsieur Purrot stays enigmatically silent, no doubt waiting for the great reveal.</p></div>  
+      <div class="chartext" id="verotext" onclick="hide('vero','verotext')" >
+        <p>Oh, there's Veronica Maus!</p>
+        <p>She's taken some photographic evidence of Pawcahontas' violent behaviour. Let's ask her to show the photos, maybe there's something interesting there.</p></div>  
+      <div class="chartext" id="fridatext" onclick="hide('frida','fridatext')" >
+        <p>Nope, that's just Frida Katlo's self-portrait, not a real cat, and certainly not the one we're looking for.</p>
+        <p>But wait, there's something stuck behind the frame!<br>
+        A piece of paper!<br>
+        A clue!</p></div>  
     </div>
-
+    
 
     <div id="footer"></div>
   </body>
