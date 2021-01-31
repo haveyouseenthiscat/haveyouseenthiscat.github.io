@@ -31,6 +31,14 @@ body {
   left: 10%;
   display: none;
 }
+.puzzle {
+  width: auto;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: none;
+}
 .chartext {
   background-color: #DAF7A6;
   padding: 2%;
@@ -47,6 +55,9 @@ body {
 #frida {
   width: 60%;
   left: 20%;
+}
+#mundo {
+  left: 40%;
 }
 #bandwtext {  
   top: 65%;

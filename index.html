@@ -45,10 +45,10 @@ Let's try to find out where she is and get her to show herself!
       <img class="character" id="pawca" onclick="hide('pawca','pawcatext')" src="assets/img/characters/pawcahontas.png" />
       <img class="character" id="hiss" onclick="hide('hiss','hisstext')" src="assets/img/characters/hissbeth.png" />
       <img class="character" id="holm" onclick="hide('holm','holmtext')" src="assets/img/characters/holmeows.png" />
-      <img class="character" id="nyancy" onclick="hide('nyancy','nyancytext')" src="assets/img/characters/nyancydrew.png" />
+      <img class="character" id="nyancy" onclick="hide('nyancy','nyancytext');switchImage('nyancy','folded')" src="assets/img/characters/nyancydrew.png" />
       <img class="character" id="purrot" onclick="hide('purrot','purrottext')" src="assets/img/characters/purrot.png" />
-      <img class="character" id="vero" onclick="hide('vero','verotext')" src="assets/img/characters/veronicamaus.png" />
-      <img class="character" id="frida" onclick="hide('frida','fridatext')" src="assets/img/characters/fridakatlo.png" />
+      <img class="character" id="vero" onclick="hide('vero','verotext');switchImage('vero','croq_c')" src="assets/img/characters/veronicamaus.png" />
+      <img class="character" id="frida" onclick="hide('frida','fridatext');switchImage('frida','mundo')" src="assets/img/characters/fridakatlo.png" />
       
       <div class="chartext" id="bandwtext" onclick="hide('bandw','bandwtext')" >
         <p>"Oh no! Who left the window open? Could she have escaped outside?...Probably not, since Barck and Wolfander are being so aggressively noisy out there. <br>
@@ -73,7 +73,7 @@ Let's try to find out where she is and get her to show herself!
       <div class="chartext" id="holmtext" onclick="hide('holm','holmtext')" >
         <p>Holmeows is lazily smoking his pipe after a good workout with the scratching post.<br>
         Maybe he can help us find the cat we're looking for.</p></div>  
-      <div class="chartext" id="nyancytext" onclick="hide('nyancy','nyancytext')" >
+      <div class="chartext" id="nyancytext" onclick="hide('nyancy','nyancytext');switchImage('nyancy','folded')" >
         <p>Look at that! Nyancy Drew is playing with the yarn!<br>
         But what's got her so spooked now? That rustling sound?<br>
         Oh! There's a crumpled note between the woollen balls. (Maybe print it out?)</p></div>  
@@ -82,14 +82,20 @@ Let's try to find out where she is and get her to show herself!
         If you let the banker stay, he will pay for petite Nyancy's toys," he says. "The answer for this little riddle is ten long."<br>
         What could that mean?<br>
         But Monsieur Purrot stays enigmatically silent, no doubt waiting for the great reveal.</p></div>  
-      <div class="chartext" id="verotext" onclick="hide('vero','verotext')" >
+      <div class="chartext" id="verotext" onclick="hide('vero','verotext');switchImage('vero','croq_c')" >
         <p>Oh, there's Veronica Maus!</p>
         <p>She's taken some photographic evidence of Pawcahontas' violent behaviour. Let's ask her to show the photos, maybe there's something interesting there.</p></div>  
-      <div class="chartext" id="fridatext" onclick="hide('frida','fridatext')" >
+      <div class="chartext" id="fridatext" onclick="hide('frida','fridatext');switchImage('frida','mundo')" >
         <p>Nope, that's just Frida Katlo's self-portrait, not a real cat, and certainly not the one we're looking for.</p>
         <p>But wait, there's something stuck behind the frame!<br>
         A piece of paper!<br>
         A clue!</p></div>  
+        
+      <img class="puzzle" id="croq_c" onclick="switchImage('croq_c','laby')" src="assets/img/puzzles/croquette_code.jpg" />
+      <img class="puzzle" id="laby" onclick="switchImage('laby','croq')" src="assets/img/puzzles/labyrinth.jpg" />
+      <img class="puzzle" id="croq" onclick="this.style.display='none'" src="assets/img/puzzles/croquettes.jpg" />
+      <img class="puzzle" id="folded" onclick="this.style.display='none'" src="assets/img/puzzles/folded_paper.png" />
+      <img class="puzzle" id="mundo" onclick="this.style.display='none'" src="assets/img/puzzles/mundostina1.png" />
     </div>
     
 
