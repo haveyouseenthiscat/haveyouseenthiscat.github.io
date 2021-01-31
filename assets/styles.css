@@ -8,6 +8,7 @@
   --topB: 36%;
   --topC: 64.1%;
 }
+body {font-family: "Roboto", sans-serif}
 .parent {
   width: 80%;
   height: auto%;
