@@ -48,8 +48,8 @@ function clickA2() {
 //  show('vero','verotext');} //local testing
   checkVisited('pawcahontas','vero','verotext');}
 function clickA3() {
-  show('solve','namecheck');}
-//  checkVisited('holmeows','solve','namecheck');}
+//  show('solve','namecheck');}
+  checkVisited('holmeows','solve','namecheck');}
 function clickB1() {
   show('hiss','hisstext');}
 function clickB2() {
