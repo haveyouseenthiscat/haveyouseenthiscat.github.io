@@ -9,7 +9,8 @@
   --topC: 64.1%;
 }
 body {
-  padding: 10% 10%;
+  padding-left: 10%;
+  padding-right: 10%;
   font-family: "Roboto", sans-serif
 }
 .center {

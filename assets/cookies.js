@@ -31,7 +31,7 @@ function checkPawca() {
   }
 }
 function setPawca() {
-  setCookie2("pawcahontas", "true");}
+  document.cookie="pawcahontas=true";}
 
 function clickA1() {
   alert("You clicked the window");
