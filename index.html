@@ -3,6 +3,7 @@
   <head>
     <meta name="google-site-verification" content="3LKwQ5vPE1JCE_JjuUy3pMz5V99YVQEGEGU0Y7YYXC8" />
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/cookies.js"></script>
     <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -11,30 +12,35 @@
     <script> 
 $(function(){
   $("#header").load("header.html"); 
-  $("#footer").load("footer.html"); 
+  $("#footer").load("header.html"); 
 });
     </script> 
   </head>
   <body>
     <div id="header"></div>
 
-    <h2>Have You Seen This Cat?</h2>
-    <p>Where is the cat? <br>
-She likes to hang out in this room, but now she's nowhere to be seen.
+    <div class="parent">
+      <img class="cat" src="assets/img/mango.png" alt="Have You Seen This Cat? [cat lying on a chair]" title="Have You Seen This Cat?" />
+    </div>
+    <div class="center">
+      <h3>Where is the cat?</h3>
+      <p>
+She likes to hang out in this room, but now she's nowhere to be seen. <br>
 Let's try to find out where she is and get her to show herself!
-    </p>
+      </p>
+    </div>
 
     <div class="parent">
       <img class="borders" src="assets/img/room/huone_reunat.png" />
-      <img class="A1" src="assets/img/room/huoneA1.png" />
-      <img class="A2" src="assets/img/room/huoneA2.png" />
-      <img class="A3" src="assets/img/room/huoneA3.png" />
-      <img class="B1" src="assets/img/room/huoneB1.png" />
-      <img class="B2" src="assets/img/room/huoneB2.png" />
-      <img class="B3" src="assets/img/room/huoneB3.png" />
-      <img class="C1" src="assets/img/room/huoneC1.png" />
-      <img class="C2" src="assets/img/room/huoneC2.png" />
-      <img class="C3" src="assets/img/room/huoneC3.png" />
+      <img class="A1" onclick="clickA1()" src="assets/img/room/huoneA1.png" />
+      <img class="A2" onclick="clickA2()" src="assets/img/room/huoneA2.png" />
+      <img class="A3" onclick="clickA3()" src="assets/img/room/huoneA3.png" />
+      <img class="B1" onclick="clickB1()" src="assets/img/room/huoneB1.png" />
+      <img class="B2" onclick="clickB2()" src="assets/img/room/huoneB2.png" />
+      <img class="B3" onclick="clickB3()" src="assets/img/room/huoneB3.png" />
+      <img class="C1" onclick="clickC1()" src="assets/img/room/huoneC1.png" />
+      <img class="C2" onclick="clickC2()" src="assets/img/room/huoneC2.png" />
+      <img class="C3" onclick="clickC3()" src="assets/img/room/huoneC3.png" />
     </div>
 
 

@@ -8,13 +8,26 @@
   --topB: 36%;
   --topC: 64.1%;
 }
-body {font-family: "Roboto", sans-serif}
+body {
+  padding: 10% 10%;
+  font-family: "Roboto", sans-serif
+}
+.center {
+  text-align: center;
+}
 .parent {
-  width: 80%;
-  height: auto%;
+  width: 100%;
+  height: auto;
   position: relative;
   top: 0;
   left: 0;
+}
+.cat {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: auto;
 }
 .borders {
   width: 100%;
@@ -87,11 +100,13 @@ body {font-family: "Roboto", sans-serif}
   left: var(--left3);
 }
 li {
-  display: inline;
+  float: left;
 }
 li a {
   display: block;
+  text-align: center;
   padding: 14px 16px;
+  text-decoration: none;
 }
 li a:hover {
   background-color: #555;
