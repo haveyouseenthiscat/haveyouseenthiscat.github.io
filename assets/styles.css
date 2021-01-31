@@ -59,6 +59,13 @@ body {
 #mundo {
   left: 40%;
 }
+#folded, #ineffable {
+  width: 80%;
+  height: auto;
+}
+#inefftext {
+  top: 75%;
+}
 #bandwtext {  
   top: 65%;
 }
@@ -84,12 +91,38 @@ body {
 #pawcatext { 
   top: 75%;
 }
+#solve {
+  left: 10%;
+  top: 10%;
+}
+#scratchtext {
+  left: 20%;
+  top: 70%;
+}
 .cat {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   height: auto;
+}
+#namecheck, #password {
+  display: none;
+  width: 50%;
+  background-color: #FEF893;
+  left: 10%;
+  top: 50%;
+}
+#password {
+  top: 67%;
+}
+#scratch {
+  display: none;
+}
+#failtext, #failpw {
+  left: 20%;
+  top: 70%;
+  background-color: #F7B2A6;
 }
 .borders {
   width: 100%;

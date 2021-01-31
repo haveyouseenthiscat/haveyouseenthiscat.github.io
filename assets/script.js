@@ -47,7 +47,9 @@ function clickA1() {
 function clickA2() {
 //  show('vero','verotext');} //local testing
   checkVisited('pawcahontas','vero','verotext');}
-function clickA3() {}
+function clickA3() {
+  show('solve','namecheck');}
+//  checkVisited('holmeows','solve','namecheck');}
 function clickB1() {
   show('hiss','hisstext');}
 function clickB2() {
@@ -64,3 +66,23 @@ function clickC2() {
 function clickC3() {
   setCookie("holmeows", "true");
   show('holm','holmtext');}
+function checkNames() {
+  var x = document.forms["thename"]["fname"].value;
+  var y = document.forms["thename"]["sname"].value;
+  var z = document.forms["thename"]["tname"].value;
+  if (x == "Mango" && y == "Mundostina" && z == "Effanineffable") {
+    hide('namecheck','solve');
+    show('scratch','scratchtext');
+  } else {
+    show('namecheck','failtext');
+  }
+}
+function checkPW() {
+  var x = document.forms["laptop"]["pw"].value;
+  if (x.toUpperCase() == "MEOW" ) {
+    hide('password','hiss');
+    show('ineffable','inefftext');
+  } else {
+    show('password','failpw');
+  }
+}

@@ -9,6 +9,18 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
     </script>
+    <script>
+      window.onload=function(){
+        var form2 = document.getElementById('laptop')
+        form2.addEventListener('submit', event => {
+          event.preventDefault()
+        })
+        var form = document.getElementById('thename')
+        form.addEventListener('submit', event => {
+          event.preventDefault()
+        })
+      }
+    </script>
     <script> 
 $(function(){
   $("#header").load("header.html"); 
@@ -43,7 +55,7 @@ Let's try to find out where she is and get her to show herself!
       <img class="C3" onclick="clickC3()" src="assets/img/room/huoneC3.png" />
       <img class="character" id="bandw" onclick="hide('bandw','bandwtext')" src="assets/img/characters/barck-wolfander.png" />
       <img class="character" id="pawca" onclick="hide('pawca','pawcatext')" src="assets/img/characters/pawcahontas.png" />
-      <img class="character" id="hiss" onclick="hide('hiss','hisstext')" src="assets/img/characters/hissbeth.png" />
+      <img class="character" id="hiss" onclick="switchImage('hisstext', 'password')" src="assets/img/characters/hissbeth.png" />
       <img class="character" id="holm" onclick="hide('holm','holmtext')" src="assets/img/characters/holmeows.png" />
       <img class="character" id="nyancy" onclick="hide('nyancy','nyancytext');switchImage('nyancy','folded')" src="assets/img/characters/nyancydrew.png" />
       <img class="character" id="purrot" onclick="hide('purrot','purrottext')" src="assets/img/characters/purrot.png" />
@@ -66,13 +78,15 @@ Let's try to find out where she is and get her to show herself!
         "After finishing the bird I chased a mouse," she says, "but the little devil escaped me."<br>
         Maybe the mouse knows something about the cat we're looking for? But where is the mouse now?<br>
         Pawcahontas probably knows, but she's sulking silently.</p></div>  
-      <div class="chartext" id="hisstext" onclick="hide('hiss','hisstext')" >
+      <div class="chartext" id="hisstext" onclick="switchImage('hisstext', 'password')" >
         <p>Hissbeth Furlander is on the table, glaring at us from behind the cactus.<br>
         She's a great hacker, too! Hopefully she can find out something on the computer...<br>
         But she has forgotten the password of the laptop! Maybe we can help her with it?</p></div>  
       <div class="chartext" id="holmtext" onclick="hide('holm','holmtext')" >
         <p>Holmeows is lazily smoking his pipe after a good workout with the scratching post.<br>
-        Maybe he can help us find the cat we're looking for.</p></div>  
+        Maybe he can help us find the cat we're looking for.</p>
+        <p>"While I was scratching the post, I heard her from the box on top, but it is empty now, and no one passed me," Holmeows says.<br>
+        "She is quite clearly above average and can only be in one place. Elementary, my dear human."</p></div>  
       <div class="chartext" id="nyancytext" onclick="hide('nyancy','nyancytext');switchImage('nyancy','folded')" >
         <p>Look at that! Nyancy Drew is playing with the yarn!<br>
         But what's got her so spooked now? That rustling sound?<br>
@@ -90,12 +104,64 @@ Let's try to find out where she is and get her to show herself!
         <p>But wait, there's something stuck behind the frame!<br>
         A piece of paper!<br>
         A clue!</p></div>  
+      <div class="chartext" id="solve" onclick="hide('solve','namecheck')">
+        <p>The cat is there for sure, but she's hiding! <br>
+        Maybe there's a hole there, and she's inside the wall!<br>
+        We'll have to call her...<br>
+        But she's quite shy, so she'll come only when called by the three different names:</p>
+
+        <p>1: The name used by the family daily</p>
+
+        <p>2: The unique, particular, peculiar name</p>
+
+        <p>3: The ineffable effable, deep and inscrutable singular Name</p></div>
         
       <img class="puzzle" id="croq_c" onclick="switchImage('croq_c','laby')" src="assets/img/puzzles/croquette_code.jpg" />
       <img class="puzzle" id="laby" onclick="switchImage('laby','croq')" src="assets/img/puzzles/labyrinth.jpg" />
       <img class="puzzle" id="croq" onclick="this.style.display='none'" src="assets/img/puzzles/croquettes.jpg" />
       <img class="puzzle" id="folded" onclick="this.style.display='none'" src="assets/img/puzzles/folded_paper.png" />
       <img class="puzzle" id="mundo" onclick="this.style.display='none'" src="assets/img/puzzles/mundostina1.png" />
+      <div class="chartext" id="namecheck" >
+        <form id="thename" onsubmit="checkNames()">
+          <label for="fname">1. Daily name:</label><br>
+          <input type="text" id="fname" name="fname"><br>
+          <label for="sname">2. Particular name:</label><br>
+          <input type="text" id="sname" name="sname"><br>
+          <label for="tname">3. Singular name:</label><br>
+          <input type="text" id="tname" name="tname"><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div id="correct">
+        <img class="character" id="scratch" onclick="hide('scratch','scratchtext')" src="assets/img/mango_scratch.jpg" />
+        <div class="chartext" id="scratchtext" onclick="hide('scratch','scratchtext')" >
+          <p>Mango Mundostina has been coding in her lair all this time!</p>
+        </div>  
+      </div>
+      <div id="incorrect">
+        <div class="chartext" id="failtext" onclick="this.style.display='none';hide('namecheck','solve');" >
+          <p>That's not quite right...have another look at the clues?</p>
+        </div>  
+      </div>
+      <div class="chartext" id="password" >
+        <form id="laptop" onsubmit="checkPW()">
+          <label for="pw">What is the password?</label><br>
+          <input type="text" id="pw" name="pw"><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div id="correctpw">
+        <img class="puzzle" id="ineffable" onclick="hide('ineffable','inefftext')" src="assets/img/puzzles/ineffable.png" />
+        <div class="chartext" id="inefftext" onclick="hide('ineffable','inefftext')" >
+          <p>Hissbeth got the computer to open, but her screen is looking pretty wild...<br>
+          Is there something to be gained here?</p>
+        </div>  
+      </div>
+      <div id="incorrectpw">
+        <div class="chartext" id="failpw" onclick="this.style.display='none';hide('password','hiss');" >
+          <p>That's not quite right...while I'm waiting, grab me a succulent to gnaw on??</p>
+        </div>  
+      </div>
     </div>
     
 
