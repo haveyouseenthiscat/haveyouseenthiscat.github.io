@@ -1,24 +1,28 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/script.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+$(function(){
+  $("#header").load("header.html"); 
+  $("#footer").load("header.html"); 
+});
+    </script> 
+</head>
+<body>
+    <div id="header"></div>
+<div class="parent">
+      <img class="cat" src="assets/img/rear_end.jpg" alt="The wrong end of the cat. [rear end of a cat lying on a pillow]" title="The wrong end of the cat." />
+    </div>
+    <div>
+<p>You got the wrong end of the cat.</p>
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+</body>
+</html>
